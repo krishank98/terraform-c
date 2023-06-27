@@ -1,7 +1,7 @@
 resource "aws_security_group" "allow_ssh_http" {
   name = "allow_ssh_http"
   description = "allow ssh and http"
-  vpc_id = data.aws_vpc.default.id
+  vpc_id = aws_vpc.main.id
 
   ingress {
     description = "allowssh"
